@@ -1,18 +1,15 @@
 <?php 
+    include 'db.inc.php';
     include 'functions.php';
     $error = '';
     $user = null;
     if(isset($_POST['submit'])){
         $name = htmlspecialchars($_POST['name']);
-        if(preg_match('/^[a-zA-Z]*$/',$name)){
-            $user = getUser($name);
-            if(empty($user['message'])){
-                echo 'Found';
-            }else{
-                echo 'Error';
-            }
+        $response= getUser($name);
+        if(empty($response['message'])){
+            $user = uploadDb($response,$conn);
         }else{
-            $error = 'Invalid name';
-            echo $error;
+            echo $error = $response['message'];
         }
+        
     }

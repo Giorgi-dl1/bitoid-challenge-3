@@ -30,7 +30,13 @@
     </form>
   </div>
 </div>
-
+<?php if($error): ?>
+  <div class="mt-5 p-2">
+        <div class="bg-red-600 border-l-8 border-red-900 mb-2 p-2">
+          <p class="px-6 py-4 font-semibold text-lg text-white"><?php echo $error; ?></p>
+        </div>
+    </div>
+<?php endif; ?>
 <?php if($user): ?>
   <div class="container px-6 mt-5 mx-auto">
         <div class="flex justify-center ">
@@ -52,4 +58,4 @@
   </div>
 <?php endif; ?>
 
-<?php include 'header.php' ?>
+<?php include 'footer.php' ?>

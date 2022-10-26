@@ -30,29 +30,11 @@
     </div>
 </section>
     <?php else: ?>
-    <div class="mt-5 p-2">
-        <div class="bg-red-600 border-l-8 border-red-900 mb-2">
-            <div class="flex items-center">
-                <div class="p-2">
-                    <div class="flex items-center">
-                        <div class="ml-2">
-                            <svg class="h-8 w-8 text-red-900 mr-2 cursor-pointer"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <p class="px-6 py-4 font-semibold text-lg text-white">ERROR.</p>
-                    </div>
-                    <div class="px-16 mb-4">
-                        <li class="text-md font-bold text-sm text-white">Something went wrong.</li>
-                    </div>
-                </div>
+        <div class="mt-5 p-2">
+            <div class="bg-red-600 border-l-8 border-red-900 mb-2 p-2">
+            <p class="px-6 py-4 font-semibold text-lg text-white">No users found!</p>
             </div>
         </div>
-    </div>
     <?php endif; ?>
 
       
